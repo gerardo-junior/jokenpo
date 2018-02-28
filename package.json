@@ -4,7 +4,7 @@
     "description": "Rock, paper, scissors",
     "repository": "git@github.com:gerardo-junior/jokenpo.git",
     "author": "Gerardo Junior <me@gerardo-junior.com>",
-    "license": "GPL-2.0",
+    "license": "GPL-3.0",
     "private": false,
     "scripts": {
         "clean": "echo \"Cleaning project\"",

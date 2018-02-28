@@ -1,20 +1,30 @@
 {
     "name": "jokenpo",
     "version": "1.0.0",
-    "description": "Rock, paper, scissors, build",
+    "description": "Rock, paper, scissors",
     "repository": "git@github.com:gerardo-junior/jokenpo.git",
     "author": "Gerardo Junior <me@gerardo-junior.com>",
     "license": "GPL-2.0",
     "private": false,
     "scripts": {
         "clean": "echo \"Cleaning project\"",
-        "test": "echo \"Testing project\"",
+        "jade-lint": "jade-lint src/",
+        "sass-lint": "sass-lint -c .sass-lint.yml 'src/scss/**/*.scss' -v -q",
+        "eslint": "eslint src/js",
+        "lint": "npm run jade-lint && npm run sass-lint && npm run eslint",
+        "test": "npm run lint && echo \"Testing project\"",
         "pre-commit": "npm run test && npm run clean"
     },
     "pre-commit": [
         "pre-commit"
     ],
     "devDependencies": {
-        "pre-commit": "^1.2.2"
+        "eslint": "^4.18.1",
+        "eslint-config-standard": "^11.0.0",
+        "eslint-plugin-promise": "^3.6.0",
+        "eslint-plugin-standard": "^3.0.1",
+        "jade-lint": "^2.1.0",
+        "pre-commit": "^1.2.2",
+        "sass-lint": "^1.12.1"
     }
 }

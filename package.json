@@ -7,7 +7,7 @@
     "license": "GPL-3.0",
     "private": false,
     "scripts": {
-        "clean": "echo \"Cleaning project\"",
+        "clean": "rimraf dist",
         "jade-lint": "jade-lint src/",
         "sass-lint": "sass-lint -c .sass-lint.yml 'src/scss/**/*.scss' -v -q",
         "eslint": "eslint src/js",
@@ -29,6 +29,7 @@
         "eslint-plugin-standard": "^3.0.1",
         "jade-lint": "^2.1.0",
         "pre-commit": "^1.2.2",
+        "rimraf": "^2.6.2",
         "sass-lint": "^1.12.1",
         "webpack": "^4.0.1",
         "webpack-dev-server": "^3.1.0",

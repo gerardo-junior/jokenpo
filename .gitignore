@@ -59,3 +59,9 @@ typings/
 
 # Visual Studio Code
 .vscode
+
+# Macosx
+.DS_Store
+
+# Build folder
+dist

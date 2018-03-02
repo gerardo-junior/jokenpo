@@ -32,6 +32,8 @@
         "pre-commit": "^1.2.2",
         "pug-lint": "^2.5.0",
         "rimraf": "^2.6.2",
-        "sass-lint": "^1.12.1"
+        "sass-lint": "^1.12.1",
+        "webpack": "^4.0.1",
+        "webpack-cli": "^2.0.10"
     }
 }

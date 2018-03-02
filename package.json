@@ -8,10 +8,10 @@
     "private": false,
     "scripts": {
         "clean": "rimraf dist",
-        "jade-lint": "jade-lint src/",
+        "pug-lint": "pug-lint src/",
         "sass-lint": "sass-lint -c .sass-lint.yml 'src/scss/**/*.scss' -v -q",
         "eslint": "eslint src/js",
-        "lint": "npm run jade-lint && npm run sass-lint && npm run eslint",
+        "lint": "npm run pug-lint && npm run sass-lint && npm run eslint",
         "test": "npm run lint && echo \"Testing project\"",
         "pre-commit": "npm run test && npm run clean"
     },
@@ -29,12 +29,9 @@
         "eslint-plugin-node": "^6.0.1",
         "eslint-plugin-promise": "^3.6.0",
         "eslint-plugin-standard": "^3.0.1",
-        "jade-lint": "^2.1.0",
         "pre-commit": "^1.2.2",
+        "pug-lint": "^2.5.0",
         "rimraf": "^2.6.2",
-        "sass-lint": "^1.12.1",
-        "webpack": "^4.0.1",
-        "webpack-dev-server": "^3.1.0",
-        "webpack-merge": "^4.1.2"
+        "sass-lint": "^1.12.1"
     }
 }

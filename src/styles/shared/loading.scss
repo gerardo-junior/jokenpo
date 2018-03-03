@@ -1,0 +1,41 @@
+.loading {
+    background: #3498db;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+    font-family: $font-type-one;
+	font-weight: 700;
+	text-align: center;
+
+	&.loaded {
+		transition: opacity .5s ease-in-out;
+		opacity: 0;
+		width: 0%;
+	}
+
+	.text {
+		position: relative;
+		color: rgba(0, 0, 0, .3);
+		font-size: 80px;
+		top: calc(50% - calc(80px / 2));
+	}
+
+	.text:before {
+		content: attr(data-text);
+		position: absolute;
+		overflow: hidden;
+		max-width: 7em;
+		white-space: nowrap;
+		color: #fff;
+		animation: loading 6s infinite;
+		top: calc(50% - calc(97px / 2));
+	}
+	
+	@keyframes loading {
+		0% {
+			max-width: 0;
+		}
+	}
+}

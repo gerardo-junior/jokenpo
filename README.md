@@ -12,3 +12,6 @@
     [+] GITHUB:       https://github.com/gerardo-junior/jokenpo
     [+] TELEGRAM:     @MrGerardoJunior
 ```
+
+## License
+This project is under the MIT license.

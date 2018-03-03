@@ -8,17 +8,12 @@
     font-family: $font-type-one;
 	font-weight: 700;
 	text-align: center;
-
-	&.loaded {
-		transition: opacity .5s ease-in-out;
-		opacity: 0;
-	}
-
+	
 	.text {
 		position: relative;
 		color: rgba(0, 0, 0, .3);
-		font-size: 80px;
-		top: calc(50% - calc(80px / 2));
+		font-size: 30px;
+		top: calc(50% - calc(50px / 2));
 	}
 
 	.text:before {
@@ -29,12 +24,50 @@
 		white-space: nowrap;
 		color: #fff;
 		animation: loading 6s infinite;
-		top: calc(50% - calc(97px / 2));
+		top: calc(50% - calc(36px / 2));
 	}
-	
+
 	@keyframes loading {
 		0% {
 			max-width: 0;
+		}
+	}
+
+	.is-loaded {
+		animation: fade-out .4s ease-out both;
+	}
+
+	@keyframes fade-out {
+		0% {
+			opacity: 1;
+		}
+		99% {
+			opacity: 0;
+		}
+		100% {
+			display: none
+		}
+	}
+
+
+
+	@media (min-width: 420px){
+		.text {
+			font-size: 50px;
+			top: calc(50% - calc(50px / 2));
+		}
+		.text:before {
+			top: calc(50% - calc(58px / 2));
+		}
+	}
+
+	@media (min-width: 700px){
+		.text {
+			font-size: 80px;
+			top: calc(50% - calc(80px / 2));
+		}
+		.text:before {
+			top: calc(50% - calc(97px / 2));
 		}
 	}
 }

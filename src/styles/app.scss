@@ -1,21 +1,51 @@
 // Vendor
 @import "~normalize.css/normalize.css";
 
+@import "./helper/anim";
+
 @import "./config/variables";
 // Shared components
 @import "./shared/loading";
 
 
-.choice{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 50%;
-    display: block;
+// .choice{
+//     position: relative;
+//     width: 100%;
+//     height: 50%;
+//     top: 0;
+//     left: 0;
 
-    @media (min-width: 450px){
-        height: 100%;
-        width: 50%;
-        display: inline;
-    }
-}
+//     background-color: blueviolet;
+//     &:nth-of-type(2) {
+//         top: 50%;    
+//         background-color: aqua;
+//     }
+
+//     // .container {
+//     //     position: relative;
+//     //     margin-top: calc(25% - calc(200px/2));
+//     //     // margin-left: calc(25% - calc(200px/2));
+//     //     .button{
+//     //         position: relative;
+//     //         border-radius: 100%;
+//     //         background-color: white;
+//     //         height: 200px;
+//     //         width: 200px;
+//     //     }
+//     // }
+// }
+
+// // @media (min-width: 650px){
+// //     .choice{
+// //         height: 100%;
+// //         width: 50%;
+// //         &:nth-of-type(2) {
+// //             top: 0;  
+// //             left: 50%;
+// //         }
+
+// //         .button{
+// //             margin-top: calc(50% - calc(200px / 2));
+// //         }
+// //     }
+// // }

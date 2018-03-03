@@ -13,6 +13,7 @@ function ready (fn) {
 // var classManipulation = require('./functions/classManipulation')
 
 ready(function () {
-  document.querySelector('div.loading').classList.add('loaded')
+  document.querySelector('div.loading').classList.add('is-loaded')
   // document.querySelector('div.loading').remove()
+  // document.querySelector('div.choice').classList.add('is-loaded')
 })

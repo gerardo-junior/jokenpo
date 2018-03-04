@@ -4,15 +4,33 @@ block append head
 		- var title='Rock, paper, scissors'; // Page title
 
 block content
-	include ../shared/loading
+	include ../components/loading
 	
 	div.choice-game.a
 		.container
-			.button
+			.button(game-id="1")
 				i.icon-hand-scissors
-			.span Rock, Paper, Scissors
+			.span Classic
 	div.choice-game.b
 		.container
-			.button
+			.button(game-id="2")
 				i.icon-hand-spock
-			.span Rock, Paper, Scissors, Lizard, Spock
+			.span Nerd
+
+	section.option
+		button#rock(data-play="rock")
+			i.icon-hand-rock
+			span Rock
+		button#paper(data-play="paper")
+			i.icon-hand-paper
+			span Paper
+		button#scissors(data-play="scissors")
+			i.icon-hand-scissors
+			span Scissors
+		button#lizard(data-play="lizard")
+			i.icon-hand-lizard
+			span Lizard
+		button#spock(data-play="spock")
+			i.icon-hand-spock
+			span Spock
+		div.result

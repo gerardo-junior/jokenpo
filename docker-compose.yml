@@ -1,10 +1,10 @@
 version: '3'
 services:
   node:
-    image: node:6-alpine
+    image: node:8.1.3
     volumes:
         - .:/src
     working_dir: "/src"
     command: ["yarn", "install", "--non-interactive"]
-    entrypoint: "yarn run start"
+    entrypoint: "yarn run build"
     tty: true

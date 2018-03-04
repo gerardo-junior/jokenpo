@@ -19,7 +19,7 @@
     &.a {
         background-color: #E74C3C;
         &.out {
-            animation: swing-out-top-fwd 0.55s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+            animation: swing-out-top-fwd .2s linear both;
         }
     }
 
@@ -27,7 +27,7 @@
         top: 50%;
         background-color: #ECF0F1;
         &.out {
-            animation: swing-out-bottom-fwd 0.55s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+            animation: swing-out-bottom-fwd .2s linear both;
         }
     }
 
@@ -57,7 +57,7 @@
         
         &.a {
             &.out {
-                animation: swing-out-left-fwd 0.55s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+                animation: swing-out-left-fwd .2s linear both;
             }
         }
 
@@ -65,7 +65,7 @@
             top: 0;
             left: 50%;
             &.out {
-                animation: swing-out-right-fwd 0.55s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+                animation: swing-out-right-fwd .2s linear both;
             }
         }
     }

@@ -5,9 +5,16 @@
 	width: 100%;
 	top: 0;
 	left: 0;
-    font-family: $font-type-one;
+    font-family: $font-type-two;
 	font-weight: 700;
 	text-align: center;
+	z-index: 9999;
+
+	&.is-loaded {
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0s linear .5s, opacity .4s linear;	
+	}
 	
 	.text {
 		position: relative;
@@ -32,24 +39,6 @@
 			max-width: 0;
 		}
 	}
-
-	.is-loaded {
-		animation: fade-out .4s ease-out both;
-	}
-
-	@keyframes fade-out {
-		0% {
-			opacity: 1;
-		}
-		99% {
-			opacity: 0;
-		}
-		100% {
-			display: none
-		}
-	}
-
-
 
 	@media (min-width: 420px){
 		.text {

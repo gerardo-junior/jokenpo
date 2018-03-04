@@ -2,50 +2,51 @@
 @import "~normalize.css/normalize.css";
 
 @import "./helper/anim";
+@import "./helper/fonts";
 
 @import "./config/variables";
 // Shared components
 @import "./shared/loading";
 
 
-// .choice{
-//     position: relative;
-//     width: 100%;
-//     height: 50%;
-//     top: 0;
-//     left: 0;
+.choice-game{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
 
-//     background-color: blueviolet;
-//     &:nth-of-type(2) {
-//         top: 50%;    
-//         background-color: aqua;
-//     }
+    background-color: rgb(204, 89, 81);
+    &:nth-of-type(2) {
+        top: 50%;
+        background-color: rgb(138, 197, 133);
+    }
 
-//     // .container {
-//     //     position: relative;
-//     //     margin-top: calc(25% - calc(200px/2));
-//     //     // margin-left: calc(25% - calc(200px/2));
-//     //     .button{
-//     //         position: relative;
-//     //         border-radius: 100%;
-//     //         background-color: white;
-//     //         height: 200px;
-//     //         width: 200px;
-//     //     }
-//     // }
-// }
+    .container {
+        background: red;
+        width: 40%;
+        height: 80%;
+        font-family: $font-type-two;
+        font-weight: 500;
+        color: white;
+        text-align: center;
+        .button{
+            height: 70px;
+            width: 70px;
+            border-radius: 100%;
+            border: 3px solid rgb(69, 69, 69) ;
+            background-color: white;
+        }
+    }
+}
 
-// // @media (min-width: 650px){
-// //     .choice{
-// //         height: 100%;
-// //         width: 50%;
-// //         &:nth-of-type(2) {
-// //             top: 0;  
-// //             left: 50%;
-// //         }
-
-// //         .button{
-// //             margin-top: calc(50% - calc(200px / 2));
-// //         }
-// //     }
-// // }
+@media (min-width: 650px){
+    .choice-game{
+        height: 100%;
+        width: 50%;
+        &:nth-of-type(2) {
+            top: 0;
+           left: 50%;
+        }
+    }
+}

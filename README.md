@@ -12,6 +12,34 @@
     [+] GITHUB:       https://github.com/gerardo-junior/jokenpo
     [+] TELEGRAM:     @MrGerardoJunior
 ```
+### How to build 
 
-## License
-This project is under the MIT license.
+You need to:
+
+ * [nodejs](https://nodejs.org/en/) 8.1.3
+ * [yarn](https://yarnpkg.com/pt-BR/) ~1.5
+ 
+#### ... and run the folder after cloning
+
+```bash
+$ yarn install
+$ yarn run build 
+```
+#### ... or build with docker
+
+```bash
+$ docker-compose up
+```
+### How to improve:
+
+```bash
+$ yarn run dev
+```
+### Run the tests:
+
+```bash
+$ yarn run test
+```
+
+####  License
+This project is under the [GPL-3.0 license](./LICENSE).

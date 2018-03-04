@@ -15,11 +15,20 @@
     left: 0;
     height: 50%;
     width: 100%;
+    
+    &.a {
+        background-color: #E74C3C;
+        &.out {
+            animation: swing-out-top-fwd 0.55s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+        }
+    }
 
-    background-color: rgb(204, 89, 81);
-    &:nth-of-type(2) {
+    &.b {
         top: 50%;
-        background-color: rgb(138, 197, 133);
+        background-color: #ECF0F1;
+        &.out {
+            animation: swing-out-bottom-fwd 0.55s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+        }
     }
 
     .container {
@@ -36,6 +45,7 @@
             border-radius: 100%;
             border: 3px solid rgb(69, 69, 69) ;
             background-color: white;
+            cursor: pointer;
         }
     }
 }
@@ -44,9 +54,19 @@
     .choice-game{
         height: 100%;
         width: 50%;
-        &:nth-of-type(2) {
+        
+        &.a {
+            &.out {
+                animation: swing-out-left-fwd 0.55s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+            }
+        }
+
+        &.b {
             top: 0;
-           left: 50%;
+            left: 50%;
+            &.out {
+                animation: swing-out-right-fwd 0.55s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+            }
         }
     }
 }

@@ -6,14 +6,14 @@ function ready (fn) {
   }
 }
 
-// components
-// import button from './components/Button'
-
-// functions
-// var classManipulation = require('./functions/classManipulation')
-
 ready(function () {
   document.querySelector('div.loading').classList.add('is-loaded')
-  // document.querySelector('div.loading').remove()
-  // document.querySelector('div.choice').classList.add('is-loaded')
+
+  document.querySelectorAll('div.choice-game .container .button').forEach(function (obj, id, nodeList) {
+    obj.addEventListener('click', function (evt) {
+      nodeList.forEach(function (obj) {
+        obj.parentElement.parentElement.classList.add('out')
+      })
+    })
+  })
 })

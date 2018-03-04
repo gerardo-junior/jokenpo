@@ -1,11 +1,14 @@
 // Vendor
 @import "~normalize.css/normalize.css";
 
+// Configs
+@import "./config/variables";
+
+// Helpers
 @import "./helper/global";
 @import "./helper/anim";
 @import "./helper/fonts";
 
-@import "./config/variables";
 // Shared components
 @import "./shared/loading";
 
@@ -26,28 +29,41 @@
 
     &.b {
         top: 50%;
-        background-color: #ECF0F1;
+        background-color: rgb(175, 198, 51);
         &.out {
             animation: swing-out-bottom-fwd .2s linear both;
         }
     }
 
     .container {
-        background: red;
-        width: 40%;
-        height: 80%;
         font-family: $font-type-two;
         font-weight: 500;
         color: white;
+        text-shadow: 3px 3px rgb(69, 69, 69);
         text-align: center;
+        width: 70px;
+        margin-left: calc(50% - calc(70px / 2));
         .button{
+            margin-bottom: 5px;
             height: 70px;
             width: 70px;
             border-radius: 100%;
-            border: 3px solid rgb(69, 69, 69) ;
+            box-shadow: 3px 3px rgb(69, 69, 69);
             background-color: white;
             cursor: pointer;
+            color: rgb(69, 69, 69);
+            font-size: 50px;
+            text-shadow: none;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
         }
+        
+        .button:active {
+            box-shadow: 0px 0px #000;
+            transform: translate(3px,3px);
+        }
+
     }
 }
 
@@ -69,5 +85,11 @@
                 animation: swing-out-right-fwd .2s linear both;
             }
         }
+
+        .container {
+            margin-left: 0;
+            margin-top: 3em;
+        }
+
     }
 }

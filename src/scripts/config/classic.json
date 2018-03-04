@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Rock",
+        "defeat": [3]
+    },
+    {
+        "id": 2,
+        "name": "Paper",
+        "defeat": [1]
+    },
+    {
+        "id": 3,
+        "name": "Scissors",
+        "defeat": [2]
+    }
+]

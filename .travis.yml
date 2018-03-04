@@ -3,9 +3,9 @@ node_js:
   - "lts/*"
   - "8.1.3"
 before_install:
-  - if [ "$BRANCH" == "master" ]; sudo apt-get install ncftp; fi
+  - if [ "$BRANCH" == "master" ]; then sudo apt-get install ncftp; fi
 after_success:
-  - if [ "$BRANCH" == "master" ]; 
+  - if [ "$BRANCH" == "master" ]; then
   - yarn run build
-  - then ncftpput -R -v -u $TRAVIS_USER -p $TRAVIS_PASS ftp.gerardo-junior.com /jokenpo dist/*; 
+  - ncftpput -R -v -u $TRAVIS_USER -p $TRAVIS_PASS ftp.gerardo-junior.com /jokenpo dist/*
   - fi

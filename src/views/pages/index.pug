@@ -8,29 +8,32 @@ block content
 	
 	div.choice-game.a
 		.container
-			.button(game-id="1")
+			.button(game="a")
 				i.icon-hand-scissors
 			.span Classic
 	div.choice-game.b
 		.container
-			.button(game-id="2")
+			.button(game="b")
 				i.icon-hand-spock
 			.span Nerd
 
-	section.option
-		button#rock(data-play="rock")
-			i.icon-hand-rock
-			span Rock
-		button#paper(data-play="paper")
-			i.icon-hand-paper
-			span Paper
-		button#scissors(data-play="scissors")
-			i.icon-hand-scissors
-			span Scissors
-		button#lizard(data-play="lizard")
-			i.icon-hand-lizard
-			span Lizard
-		button#spock(data-play="spock")
-			i.icon-hand-spock
-			span Spock
-		div.result
+	section.game
+		.button-back
+			i.icon-cancel
+		.container
+			button.option#rock(play="rock")
+				i.icon-hand-rock
+				span Rock
+			button.option#paper(play="paper")
+				i.icon-hand-paper
+				span Paper
+			button.option#scissors(play="scissors")
+				i.icon-hand-scissors
+				span Scissors
+			button.option#lizard(play="lizard")
+				i.icon-hand-lizard
+				span Lizard
+			button.option#spock(play="spock")
+				i.icon-hand-spock
+				span Spock
+			div#result

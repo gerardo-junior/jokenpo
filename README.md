@@ -25,12 +25,12 @@ You need to:
 
 ```bash
 $ yarn install
-$ yarn run build 
+$ yarn run build # or yarn run start
 ```
 #### ... or build with docker
 
 ```bash
-$ docker-compose up
+$ docker-compose up # open in your browser http://localhost:8000/
 ```
 ### How to improve:
 

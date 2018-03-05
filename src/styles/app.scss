@@ -25,6 +25,9 @@
         &.out {
             animation: swing-out-top-fwd .2s linear both;
         }
+        .container {
+            transform: translateY(120%);
+        }
     }
 
     &.b {
@@ -33,35 +36,38 @@
         &.out {
             animation: swing-out-bottom-fwd .2s linear both;
         }
+        .container {
+            transform: translateY(40%);
+        }
     }
 
     .container {
         font-family: $font-type-two;
         font-weight: 500;
         color: white;
-        text-shadow: 3px 3px rgb(69, 69, 69);
+        text-shadow: 4px 4px rgb(69, 69, 69);
         text-align: center;
-        width: 70px;
-        margin-left: calc(50% - calc(70px / 2));
+        width: 104px;
+        margin: 0 auto;        
         .button{
-            margin-bottom: 5px;
-            height: 70px;
-            width: 70px;
+            height: 100px;
+            width: 100px;
             border-radius: 100%;
-            box-shadow: 3px 3px rgb(69, 69, 69);
+            box-shadow: 4px 4px rgb(69, 69, 69);
             background-color: white;
             cursor: pointer;
             color: rgb(69, 69, 69);
-            font-size: 50px;
+            font-size: 70px;
             text-shadow: none;
             display: flex;
             align-items: center; 
             justify-content: center;
+            margin-bottom: 8px;
         }
         
         .button:active {
             box-shadow: 0px 0px #000;
-            transform: translate(3px,3px);
+            transform: translate(4px,4px);
         }
 
     }
@@ -76,6 +82,9 @@
             &.out {
                 animation: swing-out-left-fwd .2s linear both;
             }
+            .container {   
+                margin-right: 15%; 
+            }
         }
 
         &.b {
@@ -84,12 +93,27 @@
             &.out {
                 animation: swing-out-right-fwd .2s linear both;
             }
+            .container {   
+                margin-left: 15%; 
+            }
         }
 
         .container {
-            margin-left: 0;
-            margin-top: 3em;
-        }
+            width: 164px;
+            font-size: 30px;
+            text-shadow: 6.4px 6.4px rgb(69, 69, 69); 
+            transform: translateY(100%) !important;
+            .button{
+                height: 160px;
+                width: 160px;
+                box-shadow: 6.4px 6.4px rgb(69, 69, 69);
 
+            }
+
+            .button:active {
+                box-shadow: 0px 0px #000;
+                transform: translate(6.4px,6.4px);
+            }
+        }
     }
 }

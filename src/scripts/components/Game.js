@@ -16,7 +16,7 @@ export default class Game {
     if (selection === cpuSelection.id) { // Check if player tied with CPU
       data.message = selection + ' tied with ' + selection
       data.tie = selection
-    } else if (cpuSelection.defeat.indexOf(selection) === 1) { // Check if player won
+    } else if (cpuSelection.defeat.indexOf(selection) !== 1) { // Check if player won
       data.message = selection + ' wins ' + cpuSelection.id
       data.winner = selection
       data.loser = cpuSelection.id

@@ -20,10 +20,11 @@ section.game {
         top: calc(50% - calc(120px / 2));
         padding: 10px;
         font-family: $font-type-two;
-        .result {
+        #result {
             margin-top: 10px;
             color: rgb(69, 69, 69);
             opacity: 0;
+            text-transform: capitalize;
             &.show {
                 animation: swing-in-bottom-fwd .1s linear both;
             }
@@ -123,7 +124,7 @@ section.game {
                     display: block;
                     margin: 10px;
                 }
-                .result {
+                #result {
                     visibility: hidden;
                 }
             }
@@ -182,7 +183,7 @@ section.game {
                         font-size: 23px;
                     }
                 }
-                .result {
+                #result {
                     visibility: hidden;
                 }
             }

@@ -1,0 +1,197 @@
+section.game {
+    display: flex;
+    align-items: center; //centraliza horizontalmente
+    justify-content: center;
+     .container {
+        position: absolute;
+        top: calc(50% - calc(120px / 2));
+        padding: 10px;
+        font-family: $font-type-two;
+        .result {
+            margin-top: 10px;
+            color: rgb(69, 69, 69);
+            opacity: 0;
+            &.show {
+                animation: swing-in-bottom-fwd .1s linear both;
+            }
+
+            &.hide {
+                animation: swing-out-bottom-fwd .1s linear both;
+            }
+        }
+
+        button.option {
+            &.in {
+                &#rock {
+                    animation: swing-in-top-fwd .5s linear both;
+                }
+                &#paper {
+                    animation: swing-in-top-fwd .7s linear both;
+                }
+                &#scissors {
+                    animation: swing-in-top-fwd .9s linear both;
+                }
+                &#lizard {
+                    animation: swing-in-top-fwd 1.1s linear both;
+                }
+                &#spock {
+                    animation: swing-in-top-fwd 1.3s linear both;
+                }
+            }
+
+            opacity: 0;
+            background: white;
+            border-radius: 10%;
+            height: 100px;
+            width: 100px;
+            cursor: pointer;
+            margin: 10px;
+            font-weight: 700;
+            font-size: 15px;
+            border: none;
+            box-shadow: 0 6px rgb(69, 69, 69);
+
+            &:active {
+                box-shadow: 0px 0px #000;
+                transform: translate(6px, 6px);
+            }
+
+            i {
+                display: block;
+                font-size: 40px;
+                margin-bottom: 2px;
+            }
+
+            &.winner {
+                color: $c-winner;
+            }
+            
+            &.loser {
+                color: $c-loser;
+            }
+
+            &.tie {
+                color: $c-tie;
+            }
+
+            @media (min-width: 1100px) {
+                height: 150px;
+                width: 150px;
+                font-size: 20px;
+                 i {
+                    font-size: 60px;
+                    margin-bottom: 5px;
+                }
+            }
+
+        }
+    }
+
+    &.a {
+        .container {
+            button.option {
+            
+                
+                &.in {
+
+                }
+                
+                &#spock, &#lizard {
+                    display: none;
+                }
+            }
+        }
+
+        @media (max-width: 390px) {
+             .container {
+                top: calc(50% - calc(364px / 2));
+                width: 120px;
+                button.option {
+                    display: block;
+                    margin: 10px;
+                }
+                .result {
+                    visibility: hidden;
+                }
+            }
+        }
+
+        @media (max-height: 440px) and (max-width: 390px) {
+            .container {
+                top: calc(50% - calc(244px / 2));
+                text-align: center;
+                width: 80px;
+                button.option {
+                    height: 60px;
+                    width: 60px;
+                    font-size: 10px;
+                    box-shadow: 0 3px rgb(69, 69, 69);
+                    i {
+                        font-size: 23px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &.b {
+        .container {
+            
+            
+            button.option {
+                
+                
+                &.in {
+
+                }
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                top: calc(50% - calc(240px / 2));
+                width: 390px;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 390px) {
+            .container {
+                top: calc(50% - calc(400px / 2));
+                width: 80px;
+                button.option {
+                    height: 60px;
+                    width: 60px;
+                    font-size: 10px;
+                    box-shadow: 0 3px rgb(69, 69, 69);
+                    i {
+                        font-size: 23px;
+                    }
+                }
+                .result {
+                    visibility: hidden;
+                }
+            }
+        }
+
+        @media (max-height: 440px) and (max-width: 390px) {
+            .container {
+                top: calc(50% - calc(160px / 2));
+                width: 300px;
+                text-align: center;
+                button.option {
+                    height: 60px;
+                    width: 60px;
+                    font-size: 10px;
+                    box-shadow: 0 3px rgb(69, 69, 69);
+                    i {
+                        font-size: 23px;
+                    }
+                }                
+
+            }
+        }
+
+    }
+}

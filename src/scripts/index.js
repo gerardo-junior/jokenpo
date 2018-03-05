@@ -41,6 +41,9 @@ ready(function () {
           setTimeout(function () {
             document.querySelectorAll('section.game button.option').forEach(function (obj, id, nodeList) {
               obj.classList.remove('in')
+              obj.classList.remove('winner')
+              obj.classList.remove('loser')
+              obj.classList.remove('tie')
             })
             document.querySelector('section.game').classList.remove('a')
             document.querySelector('section.game').classList.remove('b')

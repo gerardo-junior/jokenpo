@@ -3,38 +3,37 @@ export default class Game {
     this.game = this.getConfig(id)
   }
 
+  getConfig (id) {
+    return require('../config/' + id + '.conf').default
+  }
+
   play (selection) {
     var data = {}
-    var game = {}
-    var cpuSelection = this.randomPlay(game)
 
-    // Check if player tied with CPU
-    if (selection === cpuSelection) {
+    // Geting CPU choice
+    var cpuSelection = this.randomPlay()
+
+    if (selection === cpuSelection.id) { // Check if player tied with CPU
       data.message = selection + ' tied with ' + selection
       data.tie = selection
-    }
-
-    // Check if player won
-    if (this.game.winners[cpuSelection].indexOf(selection) == -1) {
-      data.message = selection + ' wins ' + cpuSelection
+    } else if (cpuSelection.defeat.indexOf(selection) === 1) { // Check if player won
+      data.message = selection + ' wins ' + cpuSelection.id
       data.winner = selection
-      data.loser = cpuSelection
-    }
-
-    // Check if CPU won
-    if (this.game.winners[selection].indexOf(cpuSelection) == -1) {
-      data.message = selection + ' loses ' + cpuSelection
-      data.winner = cpuSelection
+      data.loser = cpuSelection.id
+    } else { // CPU won
+      data.message = selection + ' loses ' + cpuSelection.id
+      data.winner = cpuSelection.id
       data.loser = selection
     }
 
     /* return format
       { winner: 'rock' , loser: 'paper' , message: 'rock wins scissors' }
       { tie: 'rock' , message: 'rock with rock' } */
+    console.log(data)
     return data
   }
 
-  randomPlay (arr) {
-    return arr[Math.floor(Math.random() * arr.length)]
+  randomPlay () {
+    return this.game[Math.floor(Math.random() * this.game.length)]
   }
 }

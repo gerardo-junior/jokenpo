@@ -9,7 +9,10 @@
     
     &.a {
         background-color: #E74C3C;
-        &.out {
+        &.show {
+            animation: swing-in-top-fwd .2s linear both;
+        }
+        &.hide {
             animation: swing-out-top-fwd .2s linear both;
         }
         .container {
@@ -20,7 +23,11 @@
     &.b {
         top: 50%;
         background-color: #2CA362;
-        &.out {
+
+        &.show {
+            animation: swing-in-bottom-fwd .2s linear both;
+        }
+        &.hide {
             animation: swing-out-bottom-fwd .2s linear both;
         }
         .container {
@@ -94,7 +101,10 @@
         width: 50%;
         
         &.a {
-            &.out {
+            &.show {
+                animation: swing-in-left-fwd .2s linear both;
+            }
+            &.hide {
                 animation: swing-out-left-fwd .2s linear both;
             }
             .container {   
@@ -105,7 +115,10 @@
         &.b {
             top: 0;
             left: 50%;
-            &.out {
+            &.show {
+                animation: swing-in-right-fwd .2s linear both;
+            }
+            &.hide {
                 animation: swing-out-right-fwd .2s linear both;
             }
             .container {   

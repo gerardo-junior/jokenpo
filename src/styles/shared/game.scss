@@ -2,6 +2,19 @@ section.game {
     display: flex;
     align-items: center; //centraliza horizontalmente
     justify-content: center;
+    .button-back i {
+        color: rgb(69, 69, 69);
+        font-size: 40px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+
+        @media (max-height: 300px) and (max-width: 560px) {
+            top: 5px;
+            left: 5px;
+            font-size: 25px;
+        }
+    }
      .container {
         position: absolute;
         top: calc(50% - calc(120px / 2));

@@ -5,6 +5,7 @@
     left: 0;
     height: 50%;
     width: 100%;
+    z-index: 1000;
     
     &.a {
         background-color: #E74C3C;
@@ -59,7 +60,7 @@
 }
 
 // hack only for disengagement of conscience, because cell with the screen almost does not exist
-@media (max-height: 336px) {
+@media (max-height: 336px) and (max-width: 650px)  {
     .choice-game{
         &.a {
             .container {   

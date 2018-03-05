@@ -54,6 +54,7 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
+.icon-cancel:before { content: '\e800'; } /* '' */
 .icon-hand-rock:before { content: '\f255'; } /* '' */
 .icon-hand-paper:before { content: '\f256'; } /* '' */
 .icon-hand-scissors:before { content: '\f257'; } /* '' */

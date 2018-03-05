@@ -26,7 +26,7 @@
             animation: swing-out-top-fwd .2s linear both;
         }
         .container {
-            transform: translateY(120%);
+            top: calc(60% - calc(126.4px / 2));
         }
     }
 
@@ -37,22 +37,23 @@
             animation: swing-out-bottom-fwd .2s linear both;
         }
         .container {
-            transform: translateY(40%);
+            top: calc(40% - calc(126.4px / 2));
         }
     }
 
     .container {
+        position: absolute;
         font-family: $font-type-two;
         font-weight: 500;
         color: white;
         text-shadow: 4px 4px rgb(69, 69, 69);
         text-align: center;
         width: 104px;
-        margin: 0 auto;        
+        left: calc(50% - calc(104px / 2));       
         .button{
+            border-radius: 100%;
             height: 100px;
             width: 100px;
-            border-radius: 100%;
             box-shadow: 4px 4px rgb(69, 69, 69);
             background-color: white;
             cursor: pointer;
@@ -71,6 +72,37 @@
         }
 
     }
+
+    
+}
+
+// hack only for disengagement of conscience, because cell with the screen almost does not exist
+@media (max-height: 336px) {
+    .choice-game{
+        &.a {
+            .container {   
+                top: calc(60% - calc(86.4px / 2));
+            }
+        }
+
+        &.b {
+            .container {   
+                top: calc(40% - calc(86.4px / 2));
+            }
+        }
+
+        .container {
+            width: 62px;
+            left: calc(50% - calc(62px / 2)); 
+            text-shadow: 2px 2px rgb(69, 69, 69);
+            .button {
+                height: 60px;
+                width: 60px;
+                box-shadow: 2px 2px rgb(69, 69, 69);
+                font-size: 30px;
+            }
+        }
+    }
 }
 
 @media (min-width: 650px){
@@ -83,7 +115,7 @@
                 animation: swing-out-left-fwd .2s linear both;
             }
             .container {   
-                margin-right: 15%; 
+                right: calc(60% - calc(164px / 2)); 
             }
         }
 
@@ -94,7 +126,7 @@
                 animation: swing-out-right-fwd .2s linear both;
             }
             .container {   
-                margin-left: 15%; 
+                left:  calc(40% - calc(164px / 2)); 
             }
         }
 
@@ -102,7 +134,7 @@
             width: 164px;
             font-size: 30px;
             text-shadow: 6.4px 6.4px rgb(69, 69, 69); 
-            transform: translateY(100%) !important;
+            top: calc(50% - calc(202.5px / 2)) !important;
             .button{
                 height: 160px;
                 width: 160px;

@@ -29,7 +29,6 @@ export default class Game {
     /* return format
       { winner: 'rock' , loser: 'paper' , message: 'rock wins scissors' }
       { tie: 'rock' , message: 'rock with rock' } */
-    console.log(data)
     return data
   }
 

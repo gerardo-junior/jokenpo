@@ -66,7 +66,7 @@ ready(function () {
 
       if (window.game !== null) {
         var played = window.game.play(obj.getAttribute('play'))
-        if (!(played.tie instanceof Object)) {
+        if (!played.tie) {
           document.getElementById(played.winner).classList.add('winner')
           document.getElementById(played.loser).classList.add('loser')
         } else {

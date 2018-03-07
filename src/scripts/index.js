@@ -9,6 +9,7 @@ function ready (fn) {
 }
 
 window.game = null
+var resultFlag = document.getElementById('result')
 
 ready(function () {
   // Loading
@@ -36,6 +37,8 @@ ready(function () {
         elem.classList.remove('show')
 
         document.querySelector('section.game .button-back').addEventListener('click', function (evt) {
+          resultFlag.classList.remove('show')
+          resultFlag.classList.remove('hide')
           elem.classList.add('show')
           elem.classList.remove('hide')
           setTimeout(function () {
@@ -54,7 +57,6 @@ ready(function () {
     })
   })
 
-  var result = document.getElementById('result')
   var showResultTimeout
   var hideResultTimeout
   var removeClassTimeout
@@ -75,21 +77,21 @@ ready(function () {
         } else {
           document.getElementById(played.tie).classList.add('tie')
         }
-        result.classList.add('hide')
+        resultFlag.classList.add('hide')
 
         clearTimeout(showResultTimeout)
         clearTimeout(hideResultTimeout)
         clearTimeout(removeClassTimeout)
 
         showResultTimeout = setTimeout(function () {
-          result.classList.remove('hide')
-          result.innerHTML = played.message
-          result.classList.add('show')
+          resultFlag.classList.remove('hide')
+          resultFlag.innerHTML = played.message
+          resultFlag.classList.add('show')
         }, 50)
 
         hideResultTimeout = setTimeout(function () {
-          result.classList.remove('show')
-          result.classList.add('hide')
+          resultFlag.classList.remove('show')
+          resultFlag.classList.add('hide')
           removeClassTimeout = setTimeout(function () {
             nodeList.forEach(function (obj) {
               obj.classList.remove('winner')

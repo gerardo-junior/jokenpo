@@ -8,6 +8,7 @@ section.game {
         position: absolute;
         top: 10px;
         left: 10px;
+        cursor: pointer;
 
         @media (max-height: 300px) and (max-width: 560px) {
             top: 5px;
@@ -67,7 +68,7 @@ section.game {
 
             &:active {
                 box-shadow: 0px 0px #000;
-                transform: translate(6px, 6px);
+                transform: translateY(6px) !important
             }
 
             i {

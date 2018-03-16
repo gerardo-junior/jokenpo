@@ -7,12 +7,12 @@
 
 ```
     [+] AUTOR:        Gerardo Junior
-    [+] SITE:         http://gerardo-junior.com/r/jokenpo
+    [+] SITE:         https://gerardo-junior.com/r/jokenpo
     [+] EMAIL:        me@gerardo-junior.com
     [+] GITHUB:       https://github.com/gerardo-junior/jokenpo
     [+] TELEGRAM:     @MrGerardoJunior
 ```
-### [DEMO](http://gerardo-junior.com/r/jokenpo)
+### [DEMO](https://gerardo-junior.com/r/jokenpo)
 
 ### How to build 
 

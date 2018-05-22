@@ -1,9 +1,10 @@
 head
-	block title
 	meta(charset="UTF-8")
-	title #{title} - Jokenpô
-	meta(name="viewport", content="width=device-width, initial-scale=1.0")
 	meta(http-equiv="X-UA-Compatible", content="ie=edge")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0")
+	block title
+	title #{title} - Jokenpô
+	meta(name="twitter:title", property="og:title", content="#{title} - Jokenpô")
 	meta(name="twitter:card", content="summary_large_image")
 	meta(property="og:type", content="website")
 	meta(name="twitter:description", property="og:description" content="Um game simples feito com vanilla.js e busca ser supersimples mas bem otimizado. O jogo consiste basicamente em escolher uma opção que supere a opção do oponente")

@@ -7,7 +7,7 @@
 
 ```
     [+] AUTOR:        Gerardo Junior
-    [+] SITE:         https://gerardo-junior.com/r/jokenpo
+    [+] SITE:         https://gerardo-junior.com/
     [+] EMAIL:        me@gerardo-junior.com
     [+] GITHUB:       https://github.com/gerardo-junior/jokenpo
     [+] TELEGRAM:     @MrGerardoJunior

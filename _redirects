@@ -3,3 +3,5 @@ https://jokenpo.netlify.com/* https://jokenpo.gerardo-junior.com/:splat 301!
 
 # These extra rules are required because HTTPS is not forced
 http://jokenpo.netlify.com/* https://jokenpo.gerardo-junior.com/:splat 301!
+http://jokenpo.gerardo-junior.com/* https://jokenpo.gerardo-junior.com/:splat 301!
+

@@ -9,13 +9,12 @@ jobs:
         with:
           persist-credentials: false
       
-      - name: restore lerna
-        uses: actions/cache@master
+      - name: Restore cache
+      - uses: actions/cache@v1
         with:
-          path: |
-            node_modules
-            */*/node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+            path: ~/.npm
+            key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+            restore-keys: ${{ runner.os }}-node-
     
       - name: Install
         run: npm install --package-lock-only --non-interactive

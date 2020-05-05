@@ -20,7 +20,7 @@ jobs:
         run: npm install --package-lock-only --non-interactive
 
       - name: Tests
-        run: npm run test
+        run: ls && npm run test
     
       - name: Build
         run: npm run build
